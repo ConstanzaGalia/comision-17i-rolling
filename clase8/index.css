@@ -1,0 +1,107 @@
+body {
+  margin: 0px;
+}
+.caja {
+  padding: 50px;
+  text-align: center;
+}
+.container {
+  background-color: gray;
+  /* padding: 50px; */
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  /* 
+  ---> Estas propiedades sirven para cambiar la dirección de los
+  ---> elementos hijos.
+  flex-direction: row (default); se muestran en fila.
+  flex-direction: column; se muestran en columa.
+  flex-direction: column-reverse; se alinea hacia abajo y cambia el sentido.
+  flex-direction: row-reverse; se alinea hacia la derecha y cambia el sentido.
+  */
+
+  /* 
+  ---> Estas propiedades sirven para que dentro del padre los elementos hijos
+  mantengan sus propiedades y cuando uno no quepa en la fila (row) salta una línea
+  hacia abajo.
+  flex-wrap: nowrap; (default) El elemento se ajusta en sus propiedades para caber dentro del padre.
+  flex-wrap: wrap; Salta una columna hacia abajo en caso de no caber en la primera. Sin modificar sus propiedades.
+  */
+
+  /* 
+  ---> Sirve para unir en una sola línea las propiedades flex-direction y flex-wrap.
+  flex-flow: nowrap row; --> Los hijos recortan su propiedad width.
+  flex-flow: wrap row; 
+  flex-flow: nowrap column; --> Los hijos recortan su propiedad heigth.
+  flex-flow: wrap column; 
+  */
+
+  /* 
+  Alinamiento de los hijos de manera horizontal (eje de las X)
+  justify-content: flex-start; (default) --> Alinea hacia la izq.
+  justify-content: flex-end; --> Alinea hacia la derecha.
+  justify-content: center; --> Centrado de los elementos hijos.
+  justify-content: space-around; --> Separa los hijos equitativamente y los hijos de los extremos
+  tienen un espacio con el padre.
+  justify-content: space-between; --> Separa los hijos equitativamente y los hijos de los extremos
+  se pegan al borde del padre.
+  */
+
+  
+  /* 
+  --> Alineamiento de los elementos hijos que están en row, de manera vertical. (eje de las Y)
+  align-items: flex-start; (default) al inicio / izq.
+  align-items: flex-end; al final / derecha.
+  align-items: center; centrado.
+  align-items: baseline; --> Sin especificar width y heigth, ajusta el contenido del hijo a lo minimo que ocupa.
+  align-items: stretch; --> Sin especificar width y heigth, ajusta el contenido a lo minimo en el width, pero toma
+  todo el heigth del padre.
+  */
+
+  /* 
+  --> Alineamiento de los elementos hijos que están en column, de manera horizontal. (eje de las X)
+  align-content: flex-start; (default) Pegan al inicio / izq.
+  align-content: flex-end; Ubica las columnas al final del eje X.
+  align-content: center; Ubica las columnas al centro del eje X.
+  align-content: stretch; --> Sin especificar width y heigth, ajusta el contenido a lo minimo en el heigth, pero toma
+  todo el width del padre.
+  align-content: baseline; --> Sin especificar width y heigth, ajusta el contenido del hijo a lo minimo que ocupa.
+  */
+
+}
+
+
+.hijo {
+  border: 2px solid black;
+  padding: 10px;
+  height: 100px;
+  width: 100px;
+  background-color: tomato;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px;
+}
+/* 
+--> Con Order, especificamos la posición que ocupan los hijos.
+--> La clase hay que aplicarsela a cada uno de los hijos.
+--> flex-grow: El valor es un número Es el derecho que tiene el hijo a ocupar espacio del container padre.
+--> flex-basis: Crece un tamaño determinado. (No definir width y heigth previamente).
+--> flex-shrink: (el valor es un número). Define hasta cuanto se puede achicar un objeto.
+
+.hijo1 {
+  order:3; 
+  flex-grow: 20;
+}
+.hijo2 {
+  order:2;
+}
+.hijo3 {
+  order:1;
+} 
+
+.hijoCrack {
+  flex-basis: 500px;
+  flex-shrink: 10;
+}
+*/

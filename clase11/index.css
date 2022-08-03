@@ -1,0 +1,37 @@
+.height{
+  height: 100px;
+  background-color: tomato;
+}
+.img-card{
+  max-height: 200px;
+}
+.form{
+  width: 80%;
+  margin: auto;
+}
+.bg-modal-fade{
+  background-color: rgba(137, 206, 229, 0.63);
+}
+.btn-up{
+  height: 50px;
+  width: 50px;
+  border-radius: 40px;
+  background-color: tomato;
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+}
+.btn-up:hover {
+  transform: scale(1.5);
+}
+.angle{
+  font-size: 20px;
+}
+.img-logo-table {
+  width: 15%;
+}
+@media (max-width: 700px) {
+  .margin-card {
+    margin-top: 20px;
+  }
+}

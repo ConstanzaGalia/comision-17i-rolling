@@ -1,0 +1,99 @@
+:root {
+  --color-primary: rgb(53, 177, 199);
+  --color-secondary: tomato;
+  --color-hr: gray;
+}
+body {
+  margin: 0px;
+  font-family: 'Poppins', sans-serif;
+}
+.container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container-2 {
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.div-hijo-c-2 {
+  width: 400px;
+}
+h2 {
+  color: var(--color-secondary);
+  text-align: center;
+}
+h1 {
+  font-size: 50px;
+  font-weight: 200;
+  color: var(--color-primary);
+}
+.p {
+  font-family: 'Roboto', sans-serif;
+  width: 50%;
+}
+hr {
+  width: 70%;
+  border: 3px solid var(--color-hr);
+  background-color: var(--color-hr);
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    padding: 5px;
+    /* background-color: var(--color-hr); */
+  }
+  .p {
+    width: 90%;
+  }
+  .container-2 {
+    flex-direction: column;
+  }
+  .h1-dv-movil {
+    text-align: center;
+  }
+  .img-d-none {
+    /* display: none; */
+    width: 70%;
+  }
+}
+
+/* ejemplos: */
+
+/* Extra small devices (phones, 600px and down) */ @media
+  (max-width: 600px) {
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media screen and (min-width: 600px) {
+  /* Como minimo de 600px hacia arriba se muestren estas clases */
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media only screen and (min-width: 1200px) {
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  /* Como mínimo se muestra en dv 992px y como máximo 1200px */
+}
+
+@media screen and (orientation: landscape) and (min-width: 320px) and (max-width: 500px) {
+  /* Input Styles 
+  Cuando la pantalla sea más ancha que alta --> orientation:landscape
+  */
+}

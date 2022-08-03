@@ -1,0 +1,38 @@
+body {
+  margin: 0px;
+  height: 100vh;
+}
+.box1 {
+  width: 150px;
+  height: 150px;
+  background-color: gray;
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: tomato;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.sectionOne {
+  padding: 20px;
+  background-color: pink;
+  height: 300px;
+  position: relative;
+}
+img {
+  height: 250px;
+  position: absolute;
+  top: 50px;
+  right: 250px;
+}
+.divText {
+  width: 50%;
+  color: white;
+  text-align: center;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <title>Variables y Media Query</title>
+</head>
+<body>
+  <section>
+  <div class="container">
+    <h1>Variables CSS</h1>
+  </div>
+  <div class="container">
+    <p class="p">
+      La función var() se usa para poner una variable css y poder reutilizarla en nuestra hoja de estilo, sin necesidad de poner de manera repetitiva lo mismo.
+    </p>
+    <p class="p">
+      Una buena manera de usar las variables CSS es cuando se trata de los colores de tu diseño. En lugar de copiar y pegar los mismos colores una y otra vez, puede colocarlos en variables.
+    </p>
+  </div>
+  <hr>
+  <div class="container-2">
+    <div class="div-hijo-c-2">
+      <h2>Sintaxis</h2>
+      <p>
+        El nombre de la variable debe comenzar con (2 guiones medios) <b>--nombre</b> y distingue entre mayúsculas y minúsculas.
+      </p>
+    </div>
+    <div class="div-hijo-c-2">
+      <h2>Ventajas</h2>
+      <ul>
+        <li>Hace que el código sea más fácil de leer (más comprensible).</li>
+        <li>Hace que sea mucho más fácil cambiar los valores de color.</li>
+        <li>Para cambiar el color azul y blanco a un azul y blanco más suave, solo necesita cambiar los dos valores de las variables.</li>
+      </ul>
+    </div>
+  </div>
+  
+  </section>
+  <section>
+    <div class="container">
+      <h1 class="h1-dv-movil">Medias Query CSS</h1>
+    </div>
+    <div class="container">
+      <p>
+        Las medias queries son un módulo de css, que en el desarrollo web nos permite adaptar el contenido de nuestra web a las características del dispositivo en el cual se abrió la página web. Más precisamente en lo que refiere a la resolución de la pantalla (tamaño).
+      </p>
+      <img src="https://i0.wp.com/www.silocreativo.com/wp-content/uploads/2016/11/media-query-para-mobile-first.png?resize=666%2C500&quality=100&strip=all&ssl=1" alt="mobile-first" class="img-d-none">
+      <p>
+        Son una sintaxis de CSS que nos permite definir estilos que solo se aplican cuando dicha condición se cumple.
+        Las medias query actúan como contenedores de estilos css.
+      </p>
+    </div>
+    <div class="container">
+      <h2>Diseño Responsive</h2>
+      <p>
+        La forma de trabajo es usar un mismo diseño de página para que se adapte a todas las resoluciones.
+        Gracias a las medias queries podemos implementar el diseño responsive, ya que se muestran o no las propiedades css, dependiendo de ciertas condiciones.
+      </p>
+      <p>Condiciones / Resultados</p>
+      <ul>
+        <li>Si la pantalla es pequeña.</li>
+        <li>Si la pantalla es grande.</li>
+        <li>Si está en posición horizontal.</li>
+      </ul>
+    </div>
+
+  </section>
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- FontAwesome -->
+  <script src="https://kit.fontawesome.com/88a8d2fbc4.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="index.css">
+  <title>Bootstrap</title>
+</head>
+
+<body>
+  <!-- Navbar Desktop -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-5" id="inicio">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Comisión 17i</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 m-lg-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#footer">Contact</a>
+          </li>
+        </ul>
+        <button class="btn btn-sm btn-outline-info me-2" type="button" data-bs-toggle="modal"
+          data-bs-target="#modalLogin">Login</button>
+        <button class="btn btn-sm btn-outline-info me-2" type="button">Registro</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Navbar Mobile -->
+  <!-- <nav class="navbar navbar-dark bg-dark d-md-none">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        Logo
+      </a>
+    </div>
+    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRightLogin" aria-controls="offcanvasRight">+</button>
+  </nav> -->
+  <!-- OffCanvas-Navbas-mobile -->
+  <!-- <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRightLogin" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+      <h5 id="offcanvasRightLabel">Offcanvas right</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 m-lg-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#footer">Contact</a>
+        </li>
+      </ul>
+      <button class="btn btn-sm btn-outline-info me-2" type="button" data-bs-toggle="modal"
+        data-bs-target="#modalLogin">Login</button>
+      <button class="btn btn-sm btn-outline-info me-2" type="button">Registro</button>
+    </div>
+    </div>
+  </div> -->
+
+  <!-- Carousel Desktop -->
+  <div id="carouselExampleIndicators" class="carousel slide d-none d-md-block" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <a href="https://getbootstrap.com/docs/5.0/components/carousel/#dark-variant">
+          <img src="https://s3-us-west-2.amazonaws.com/devcodepro/media/blog/que-es-bootstrap-opengraph.png"
+            class="d-block w-100" alt="Bootstrap">
+        </a>
+      </div>
+      <div class="carousel-item">
+        <img
+          src="https://s3-us-west-2.amazonaws.com/devcodepro/media/tutorials/pseudoclases-css-first-child-last-child-nth-child-t2.png"
+          class="d-block w-100" alt="css">
+      </div>
+      <div class="carousel-item">
+        <img src="https://dc722jrlp2zu8.cloudfront.net/media/featured_images/HTML-5-2-HTML5.jpg" class="d-block w-100"
+          alt="html">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- Carousel Mobile -->
+  <div id="carouselExampleIndicators" class="carousel slide d-md-none" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://cdn.wallpapersafari.com/31/0/1gnvP8.jpg" class="d-block w-100" alt="Bootstrap">
+      </div>
+      <div class="carousel-item">
+        <img src="https://i.pinimg.com/originals/eb/8f/1e/eb8f1e7714d2158eda60d90ea1669a09.jpg" class="d-block w-100"
+          alt="css">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- Section-Cursos -->
+  <div class="container p-5">
+    <h3 class="my-5">Cursos</h3>
+    <div class="row justify-content-around">
+      <div class="card margin-card shadow m-1" style="width: 18rem;">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png"
+          class="card-img-top img-card" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Curso JS</h5>
+          <p class="card-text">Javascript el mejor lenguaje de programación</p>
+          <div class="d-grid gap-2">
+            <a href="#" class="btn btn-secondary btn-sm text-white">Inscripción</a>
+          </div>
+        </div>
+      </div>
+      <div class="card margin-card shadow m-1" style="width: 18rem;">
+        <img src="https://vuejs.org//images/logo.png" class="card-img-top img-card" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Curso Vue</h5>
+          <p class="card-text">Es un framework de javascript</p>
+          <div class="d-grid gap-2">
+            <a href="#" class="btn btn-secondary btn-sm text-white">Inscripción</a>
+          </div>
+        </div>
+      </div>
+      <div class="card margin-card shadow m-1" style="width: 18rem;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/800px-React.svg.png"
+          class="card-img-top img-card" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Curso React</h5>
+          <p class="card-text">Es un framework de frontend</p>
+          <div class="d-grid gap-2">
+            <a href="#" class="btn btn-secondary btn-sm text-white">Inscripción</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section-Tecnologías -->
+  <div class="container p-5">
+    <h3>Tecnologías</h3>
+    <div class="table-responsive-md">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Logo</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Documentación</th>
+            <th scope="col">Usos</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td class="w-auto"><img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png"
+                alt="" class="img-logo-table"></td>
+            <td>Javascript</td>
+            <td><a href="https://developer.mozilla.org/es/docs/Web/JavaScript" _target="_blank"
+                noopener="noopener">Mozilla</a></td>
+            <td>Backend-Frontend</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td class="w-25"><img
+                src="https://hotmart.s3.amazonaws.com/product_contents/d5592da9-a9a4-424f-9718-4be1332a6d84/CSharp.png"
+                alt="" class="img-logo-table"></td>
+            <td>C#</td>
+            <td><a href="https://es.wikipedia.org/wiki/C_Sharp">Wikipedia</a></td>
+            <td>Backend - Lenguaje tipado</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Botón Up -->
+  <a href="#inicio" class="text-white">
+    <div class="btn-up text-center">
+      <i class="fa-solid fa-angles-up mt-3 angle"></i>
+    </div>
+  </a>
+
+  <!-- Footer -->
+  <footer class="footer mt-auto py-3 bg-dark" id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 text-white">
+          <h6>Redes Sociales</h6>
+          <ul>
+            <li>Facebook</li>
+            <li>Instagram</li>
+            <li>Twitter</li>
+          </ul>
+        </div>
+        <div class="col-md-4 text-center"><span class="text-muted">Rolling Code School ©</span></div>
+        <div class="col-md-4">
+          <a href="#inicio" class="text-danger text-decoration-none">Inicio</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal-Login -->
+  <div class="modal fade bg-modal-fade" id="modalLogin" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ingresá como alumno</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body py-5">
+          <!-- Formulario de Login -->
+          <form class="form">
+            <div class="mb-3">
+              <label for="formGroupExampleInput" class="form-label">Email</label>
+              <input type="email" class="form-control" id="formGroupExampleInput" placeholder="test@rolling.com">
+            </div>
+            <div class="mb-3">
+              <label for="formGroupExampleInput2" class="form-label">Password</label>
+              <input type="password" class="form-control" id="formGroupExampleInput2">
+            </div>
+            <div class="d-grid gap-2">
+              <button type="submit" class="btn btn-secondary">Ingresar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+  </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"></script>
+</body>
+
+</html>
