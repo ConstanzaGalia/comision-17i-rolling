@@ -1,0 +1,6 @@
+Comandos más usados en GIT
+
+- Inicializar un repositorio --> git init
+- Clonar un repo remoto a local --> git clone + url del repo
+- Vincular un repo local con uno remoto --> git remote add origin + url del repo
+- Para añadir todo los cambios a stage --> git add .
