@@ -6,3 +6,4 @@ Comandos más usados en GIT
 - Para añadir todo los cambios a stage --> git add .
 - Para añadir un solo archivo/directorio a stage --> git add + nombre
 - Para hacer un commit con el mensaje --> git commit -m "mensaje"
+- Para subir los cambios al remo remoto --> git push origin + nombreDeLaRama
