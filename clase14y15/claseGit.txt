@@ -8,3 +8,4 @@ Comandos más usados en GIT
 - Para hacer un commit con el mensaje --> git commit -m "mensaje"
 - Para subir los cambios al remo remoto --> git push origin + nombreDeLaRama
 - Para traer los cambios de un repo remoto --> git pull origin + nombreDeLaRama
+- Para moverme de una rama a otra, o hacia un commit --> git checkout + nombreDeLaRama/hashDelCommit
