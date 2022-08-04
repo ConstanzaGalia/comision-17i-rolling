@@ -4,3 +4,5 @@ Comandos más usados en GIT
 - Clonar un repo remoto a local --> git clone + url del repo
 - Vincular un repo local con uno remoto --> git remote add origin + url del repo
 - Para añadir todo los cambios a stage --> git add .
+- Para añadir un solo archivo/directorio a stage --> git add + nombre
+- Para hacer un commit con el mensaje --> git commit -m "mensaje"
