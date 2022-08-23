@@ -1,0 +1,73 @@
+Métodos de strings.
+--------------------
+
+.lengt --> Devuelve el largo.
+
+.slice(inicio, fin) --> Extrae desde posición inicio a fin los caracteres / Se puede omitir el fin / Si un parámetro es negativo, la posición se cuenta desde el final de la cadena.
+
+.substring(inicio, longitudExtraída) --> substr()es similar a slice(). La diferencia es que el segundo parámetro especifica la longitud extraída. / Los valores iniciales y finales inferiores a 0 se tratan como 0.
+
+.replace(palabra, palabraAReemplazar) --> método reemplaza un valor especificado (solo la primera coincidencia) con otro valor en una cadena, distingue entre mayúsculas y minúsculas.
+
+.toUpperCase() .toLowerCase() --> Conversión a mayúsculas y minúsculas.
+
+.trim() --> Quita los espacios en blanco del inicio y final.
+
+.toString() --> Convierte un núm en texto.
+
+
+Métodos de números.
+--------------------
+parseInt() --> analiza una cadena y devuelve un número entero. Se permiten espacios. Solo se devuelve el primer número.
+parseFloat() --> analiza una cadena y devuelve un número (acepta decimales). Se permiten espacios. Solo se devuelve el primer número.
+
+Math --> El objeto JavaScript Math le permite realizar tareas matemáticas en números.
+Math.round(x) --> devuelve el valor de x redondeado al entero más cercano.
+Math.floor(x) --> devuelve el valor de x redondeado hacia abajo a su entero más cercano.
+Math.min(lista) y Math.max(lista) --> se puede usar para encontrar el valor más bajo o más alto en una lista de argumentos.
+Math.random() --> devuelve un número aleatorio entre 0 (inclusive) y 1 (exclusivo).
+
+Combinar 2 metodos:
+Math.floor(Math.random() * 10); --> Devuelve un entero random entre 0 y 9.
+
+
+Arrays.
+-----------------------
+Un par de [] representa un arreglo/array, los elementos se separan por ,
+La posición de un elemento en el arreglo es conocido como indice.
+El número de elementos en el arreglo determina su longitud
+
+
+const salad = ['🍅', '🍄', '🥦', '🥒', '🌽', '🥕', '🥑'];
+
+
+Se puede crear con un constructor --> const salad = new Array('🍅', '🍄', '🥦', '🥒', '🌽', '🥕', '🥑');
+
+
+Acceder a un elemento --> const element = array[index];
+ej: const salad = ['🍅', '🍄', '🥦', '🥒', '🌽', '🥕', '🥑'];
+    salad[0]; // '🍅'
+    salad[2]; // '🥦'
+    salad[5]; // '🥕'
+
+.lenght() --> para saber la longitud.
+.push() --> añade un elemento al final.
+.unshift() --> añade un elemento al comienzo.
+.pop() --> elimina un elemento del final.
+.shift() --> elimina un elemento del comienzo.
+.concat() --> merge de 2 arrays.
+.join() --> junta todos los elementos de un arreglo usando un separador y regresa una cadena. Separador default ,
+.includes() --> Si incluye el elemento return true, sino false.
+.sort() --> Convierte los tipos de elemento  en cadena y luego los arregla. El orden de clasificación predeterminado es ascendente. El método sort () cambia la matriz original.
+.splice(position, elemABorrar, elemAAñadir) --> Añade un elemento, necesitamos pasar la posición donde queremos añadir,  cuantos elementos a borrar empezando con la posición, y con el elemento a añadir
+
+
+Otros que veremos más adelante:
+Para iterar Arreglos.
+
+.filter()
+.map()
+.find()
+.reduce()
+.some()
+.every() 
