@@ -65,9 +65,62 @@ ej: const salad = ['🍅', '🍄', '🥦', '🥒', '🌽', '🥕', '🥑'];
 Otros que veremos más adelante:
 Para iterar Arreglos.
 
-.filter()
-.map()
-.find()
-.reduce()
-.some()
-.every() 
+
+.filter() ---> Crea un nuevo array con todos los elementos que cumplan la condición implementada por la función dada.
+
+const productos = ['Notebook', 'Auriculares con cable', 'Mouse', 'Teclado', 'Mouse inahalambrico', 'Teclado Mecánico', 'Auriculares inahalambricos' ]
+
+const mouse = productos.filter(mouse => mouse === 'Mouse');
+
+
+
+
+
+.map() --> Crea un nuevo array con los resultados de la llamada a la función indicada aplicados a cada uno de sus elementos.
+
+const edades = [10, 20, 25, 15, 18, 30, 12, 56, 17]
+
+const condicion = edades.map(edad => {
+    if(edad >= 18){
+        return "Mayor de edad";
+    }else {
+        return "Menor de edad";
+    }
+})
+
+
+
+
+.find() ---> Devuelve el primer elemento del array que cumple la función de prueba proporcionada (Solo 1). si no encuentra nada return undefined.
+
+const notebook = productos.find(note => note === 'Notebook')
+
+
+
+
+
+.reduce() -->  Ejecuta una función reductora sobre cada elemento de un array, devolviendo como resultado un único valor.
+
+array.reduce((valorAnterior, valorActual, indice, array) => {
+  return valorAnterior + valorActual;
+}, valorInicial);
+
+const notas = [10, 6, 5, 3, 9, 7]
+notas.reduce((nota1, nota2) => nota1 + nota2)
+
+
+
+
+
+.some() --> Comprueba si al menos un elemento del array cumple con la condición implementada por la función proporcionada.
+
+const notas = [10, 6, 5, 3, 9, 7]
+notas.some(nota => nota > 5)
+
+
+
+
+
+.every() --> Determina si todos los elementos en el array cumplen una condición.
+const notas = [10, 6, 5, 3, 9, 7]
+notas.every(nota => nota > 5)
