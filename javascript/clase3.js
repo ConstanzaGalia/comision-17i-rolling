@@ -125,8 +125,16 @@ const edades = [10, 20, 25, 15, 18, 30, 12, 56, 17];
 
 const productos = ['Notebook', 'Auriculares con cable', 'Mouse', 'Teclado', 'Mouse', 'Teclado Mecánico', 'Auriculares inahalambricos'];
 
-const mouse = productos.filter(p => p === 'Mouse');
-console.log(mouse)
+const mouse = productos.filter(i => i === 'Mouse');
+console.log('Mouse: ', mouse)
+
+const mouse2 = [];
+for (let index = 0; index < productos.length; index++) {
+  if (productos[index] === 'Mouse') {
+    mouse2.push(productos[index])
+  }
+}
+console.log('Mouse 2', mouse2)
 
 // .map() --> Crea un nuevo array con los resultados de la llamada a la función indicada aplicados a cada uno de sus elementos.
 
@@ -138,7 +146,11 @@ const condicion = edades.map(edad => {
   }
 })
 console.log(edades)
-console.log(condicion)
+console.log('Condición:', condicion)
+
+const lista = productos.map(producto => {
+  document.write(`<li> ${producto} </li>`);
+})
 
 //.find() ---> Devuelve el primer elemento del array que cumple la función de prueba proporcionada (Solo 1). si no encuentra nada return undefined.
 
@@ -153,13 +165,22 @@ console.log(notebook)
 
 
 // const notas = [10, 6, 5, 3, 9, 7]
-const notas = [3, 6, 2, 3, 1, 4]
+const notas = [3, 4, 2, 3, 1, 4]
 const promedio = notas.reduce((prev, actual) => prev + actual) / notas.length
 
 console.log(promedio);
 
 if (promedio < 6) {
-  alert('Chau ñiño a diciembre')
+  alert('Chau niño a diciembre')
 } else {
   alert('Aprobado')
 }
+
+// .some() --> Comprueba si al menos un elemento del array cumple con la condición implementada por la función proporcionada. Funciona como un OR
+
+const boolean = notas.some(nota => nota > 5);
+console.log('Tiene al menos 1 aprobado?', boolean);
+
+// .every() --> Determina si todos los elementos en el array cumplen una condición. Funciona como un AND
+const boolean2 = notas.every(nota => nota > 5);
+console.log('Tiene todo aprobado?', boolean2);

@@ -1,0 +1,76 @@
+FUNCIONES
+
+Se pueden crear:
+
+- Por declaración: function nombre() {}
+
+- Mediante constructor de objeto: new Function(p1, p2..., code);
+
+- Por expresión:  const nombre = function(p1, p2...) { }
+«guardan funciones» dentro de variables, para posteriormente «ejecutar dichas variables»
+El segundo "saludar" (nombre de la función) se suele omitir: es redundante
+
+
+const saludo = function saludar() {
+  return "Hola";
+};
+
+saludo(); // 'Hola'
+
+Ahora el nombre de la función pasa a ser el nombre de la variable, mientras que el nombre de la función desaparece y se omite, dando paso a lo que se llaman las funciones anónimas.
+
+De ahi derivan las FUNCIONES ANÓNIMAS
+Se declaran sin nombre de función y se alojan en el interior de una variable y haciendo referencia a ella cada vez que queramos utilizarla:
+
+// Función anónima "saludo"
+const saludo = function () {
+  return "Hola";
+};
+
+saludo; // ƒ () { return 'Hola'; }
+saludo(); // 'Hola'
+
+
+CALLBACKS --> (también llamadas funciones callback o retrollamadas)
+Es pasar una función B por parámetro a una función A, de modo que la función A puede ejecutar esa función B de forma genérica desde su código, y nosotros podemos definirlas desde fuera de dicha función.
+
+// fB = Función B (callback)
+
+const fB = function () {
+  console.log("Función B ejecutada.");
+};
+
+// fError = Función Error (callback)
+
+const fError = function () {
+  console.error("Error");
+};
+
+//Aqui llamamos a la función A con 2 paramétros de nombre genérico
+const fA = function (callback, callbackError) {
+  const n = ~~(Math.random() * 5);
+  if (n > 2) callback();
+  else callbackError();
+};
+
+//Aqui llamamos a la función A con los otros callbacks
+fA(fB, fError);
+
+
+ARROW FUNCTIONS
+Las Arrow functions, funciones flecha o «fat arrow» son una forma corta de escribir funciones que aparece en Javascript a partir de ECMAScript 6. Básicamente, se trata de reemplazar eliminar la palabra function y añadir => antes de abrir las llaves, Las funciones flecha hacen que el código sea mucho más legible y claro de escribir, mejorando la productividad y la claridad a la hora de escribir código.
+
+- Si el cuerpo de la función sólo tiene una línea, podemos omitir las llaves ({}).
+
+- Además, en ese caso, automáticamente se hace un return de esa única línea, por lo que podemos omitir también el return.
+
+- En el caso de que la función no tenga parámetros, se indica como en el ejemplo anterior: () =>.
+
+- En el caso de que la función tenga un solo parámetro, se puede indicar simplemente el nombre del mismo: e =>.
+
+- En el caso de que la función tenga 2 ó más parámetros, se indican entre paréntesis: (a, b) =>.
+
+
+SCOPE --> ambiente en donde vive nuestra variable
+Global: Declaro variable fuera de una función y puedo llamarla dentro de una función.
+Local: Declaro una variable dentro de una función no puedo acceder desde fuera.
