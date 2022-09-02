@@ -29,9 +29,7 @@ const esMayorDeEdad = function (nombre) {
 //   alert(`Error: ${nombre} no puede ingresar`);
 // };
 
-const error = (nombre) => {
-  alert(`Error: ${nombre} no puede ingresar`);
-};
+const error = nombre => alert(`Error: ${nombre} no puede ingresar`);
 
 // const nombre = prompt('Ingrese su nombre');
 // const edad = parseInt(prompt('Ingrese su edad'));
