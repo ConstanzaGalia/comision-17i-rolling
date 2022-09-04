@@ -2,27 +2,22 @@
 // Alta - Baja - Modificación
 // Create - Read - Update - Delete
 
-let carrito = ['Notebook', 'Mouse', 'Teclado', 'Monitor'];
-
-console.log(carrito);
+let carrito = [];
 
 const agregarProducto = () => {
   const producto = prompt('Ingrese el producto para el carrito');
   if (producto === '') {
     return alert('No puede agregar un producto vacio')
-  } else if (producto === null){
+  } else if (producto === null) {
     return
   }
   carrito.push(producto);
-  console.log(carrito);
   actualizarLista();
 }
 
 const eliminarProducto = () => {
-  const productoEliminado = prompt('Escriba el nombre del producto que desea eliminar');
-  const productosActualizados = carrito.filter(p => p !== productoEliminado);
-  carrito = productosActualizados;
-  console.log(carrito);
+  const idProductoEliminado = parseInt(prompt('Escriba el id del producto a eliminar'));
+  ((idProductoEliminado <= 0) || (idProductoEliminado > carrito.length) || isNaN(idProductoEliminado)) ? alert("id no valido") : carrito = carrito.filter((p, i) => i !== idProductoEliminado - 1);
   actualizarLista();
 }
 
@@ -38,20 +33,23 @@ const actualizarLista = () => {
   <tbody>
     ${carrito.map((p, index) => `
     <tr>
-      <th scope="row">${++index}</th>
+      <td scope="row">${++index}</td>
       <td>${p}</td>
     </tr>
     `).join(' ')
-  }
+    }
   </tbody>
 </table>
   `
 }
 
 const editarProducto = () => {
-  let numeroProducto = prompt('Ingrese numero del producto para editar');
-  const productoEditado = prompt('Ingrese el nombre del producto a editar');
-  carrito[--numeroProducto] = productoEditado;
-  console.log(carrito[--numeroProducto])
+  let numeroProducto = parseInt(prompt('Ingrese id del producto a editar'));
+  if ((numeroProducto <= 0) || (numeroProducto > carrito.length) || isNaN(numeroProducto)) {
+    alert("id no valido");
+  } else {
+    const productoEditado = prompt('Ingrese el nombre del producto para editar');
+    carrito[--numeroProducto] = productoEditado;
+  }
   actualizarLista();
 }
