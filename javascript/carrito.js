@@ -36,10 +36,10 @@ const actualizarLista = () => {
     </tr>
   </thead>
   <tbody>
-    ${carrito.map((p, index) => `
+    ${carrito.map((producto, i) => `
     <tr>
-      <th scope="row">${++index}</th>
-      <td>${p}</td>
+      <th scope="row">${++i}</th>
+      <td>${producto}</td>
     </tr>
     `).join(' ')
   }
