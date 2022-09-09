@@ -3,13 +3,26 @@
 // Datos --> propiedades
 // Funcionalidades --> Métodos
 
+//Clase Persona - Objeto
 const persona = {
+  //Estos son los atributos - Información
   nombre: "Coco",
-  edad: "28",
+  edad: 0,
   fechaDeNacimiento: "14/09/1993",
   email: "email@email.com",
   isActive: true,
   password: "password",
+  hobbies: [],
+
+  //Con este método yo podría modificar el atributo edad.
+  calcularEdad: function (){
+    Console.log("Calcular edad")
+  },
+
+  //Métodos - Funcionalidades
+  caminar: function () {
+    console.log('Estoy caminando')
+  }
 }
 
 const persona2 = {}
