@@ -22,21 +22,23 @@
 
 //TEMPORIZADOR
 let tiempo = document.querySelector("#tiempo");
-const btnInicio = document.querySelector("#btnInicio");
-const btnDetener = document.querySelector("#btnDetener");
+
 let intervalo = 0, minutos = 0, segundos = 0;
 
 const setearTiempo = (temp) => {
-  switch(temp) {
+  clearInterval(intervalo);
+  minutos = 0, segundos = 0;
+  switch (temp) {
     case 15:
     case 30:
-    segundos = temp;
-    tiempo.innerHTML = `00:${segundos}`;
-    break;
+      segundos = temp;
+      tiempo.innerHTML = `00:${segundos}`;
+      break;
     case 1:
-    minutos = temp;
-    tiempo.innerHTML = `0${minutos}:00`;
-    break;
+    case 2:
+      minutos = temp;
+      tiempo.innerHTML = `0${minutos}:00`;
+      break;
     default:
       console.log("Tiempo no establecido");
   }
@@ -44,12 +46,15 @@ const setearTiempo = (temp) => {
 
 const iniciarTemp = () => {
   if (minutos > 0) {
-    minutos--;
-    segundos = 60;
     intervalo = setInterval(() => {
-      segundos--;
-      tiempo.innerHTML = segundos < 10 ? `00:0${segundos}`: `00:${segundos}`
-      if (segundos === 0 && minutos === 0){
+      if (minutos > 0 && segundos === 0) {
+        minutos--;
+        segundos = 60;
+      } else {
+        segundos--;
+        tiempo.innerHTML = segundos < 10 ? `0${minutos}:0${segundos}` : `0${minutos}:${segundos}`
+      }
+      if (segundos === 0 && minutos === 0) {
         clearInterval(intervalo);
       }
     }, 1000)
@@ -59,7 +64,7 @@ const iniciarTemp = () => {
     intervalo = setInterval(() => {
       segundos--;
       tiempo.innerHTML = segundos < 10 ? `00:0${segundos}` : `00:${segundos}`
-      if (segundos === 0){
+      if (segundos === 0) {
         clearInterval(intervalo);
       }
     }, 1000)
@@ -74,6 +79,6 @@ const resetTemp = () => {
 }
 
 const stopTemp = () => {
-  tiempo.innerHTML = segundos < 10 ? `00:0${segundos}` : `00:${segundos}`
+  tiempo.innerHTML = segundos < 10 ? `0${minutos}:0${segundos}` : `0${minutos}:${segundos}`
   clearInterval(intervalo);
 }
