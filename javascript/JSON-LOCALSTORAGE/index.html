@@ -10,6 +10,7 @@
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- FontAwesome -->
   <script src="https://kit.fontawesome.com/c517701c9a.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <title>Local Storage</title>
 </head>
 
@@ -21,13 +22,8 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-        <div class="">
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Login">
-            Login
-          </button>
-          <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#Registro">
-            Registro
-          </button>
+        <div id="divShowbtnNavbar" class="">
+          
         </div>
       </div>
     </div>
@@ -48,10 +44,11 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form >
+        <form id="FormularioLogin">
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Email</label>
             <input type="email" class="form-control" id="InputEmailLogin" aria-describedby="emailHelp" autocomplete="off">
+            <p id="noExiste" class="d-none text-danger">Las credenciales son inválidas</p>
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Contraseña</label>
@@ -84,6 +81,7 @@
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Email</label>
             <input type="email" class="form-control" id="InputEmailRegistro" aria-describedby="emailHelp" autocomplete="off">
+            <p id="alreadyEmail" class="d-none text-danger">El email ya se encuentra registrado</p>
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Contraseña</label>
