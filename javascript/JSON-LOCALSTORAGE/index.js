@@ -36,14 +36,14 @@ if (!userLogged) {
     ${userLogged.name}
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-    <button type="button" class="dropdown-item" onclick="profileRedirect()">Mi perfil</button>
+    <button type="button" class="dropdown-item" onclick="redirect()">Mi perfil</button>
     <button type="button" class="dropdown-item" onclick="logOut()">Cerrar Sesión</button>
   </div>
 </div>
   `
 }
 
-//FUNCUIONES
+//FUNCIONES
 function idRandom() {
   return new Date().getTime();
 }
@@ -83,25 +83,28 @@ formLogin.onsubmit = (e) => {
   e.preventDefault();
   const email = inputEmailLogin.value;
   const pass = inputPassLogin.value;
-
-  const findClient = users.find(
+  const findUser = users.find(
     (user) => user.email === email && user.pass === pass
   );
 
-  if (!findClient) {
+  if (!findUser) {
     pUserNotExist.classList.remove('d-none');
     return;
+  } else if (findUser.role === 'admin') {
+    localStorage.setItem('isAdmin', JSON.stringify(findUser));
+    swal('Bienvenido Admin');
+    redirect('./admin.html');
   } else {
-    localStorage.setItem('userLogged', JSON.stringify(findClient));
+    localStorage.setItem('userLogged', JSON.stringify(findUser));
     swal('Bienvenido');
     //Delay para la redirection
-    profileRedirect();
+    redirect('./user.html');
   }
 };
 
-const profileRedirect = () => {
+const redirect = (url) => {
   setTimeout(() => {
-    window.location.href = './user.html';
+    window.location.href = url;
   }, 1000);
 }
 
