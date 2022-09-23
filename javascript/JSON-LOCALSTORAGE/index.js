@@ -6,6 +6,10 @@ const inputEmailRegistro = document.getElementById('InputEmailRegistro');
 const inputPassRegistro = document.getElementById('InputPasswordRegistro');
 const modalRegistro = document.getElementById('Registro');
 const pAlreadyEmail = document.getElementById('alreadyEmail');
+const pPassInvalid = document.getElementById('passValid');
+
+//REGEX
+const regexPass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/
 
 //FORMULARIO DE LOGIN
 const formLogin = document.getElementById('FormularioLogin');
@@ -54,6 +58,12 @@ formRegistro.onsubmit = (event) => {
   const lastName = inputLastNameRegistro.value;
   const email = inputEmailRegistro.value;
   const pass = inputPassRegistro.value;
+
+  if (!regexPass.test(pass)) {
+    console.log(regexPass.test(pass));
+    pPassInvalid.classList.remove('d-none');
+    return
+  }
 
   const findUser = users.find((user) => user.email === email);
 

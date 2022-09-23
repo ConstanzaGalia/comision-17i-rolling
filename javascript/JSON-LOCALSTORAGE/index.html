@@ -46,13 +46,13 @@
       <div class="modal-body">
         <form id="FormularioLogin">
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email</label>
-            <input type="email" class="form-control" id="InputEmailLogin" aria-describedby="emailHelp" autocomplete="off">
+            <label for="exampleInputEmail1" class="form-label">Email</label><span class="text-danger">*</span>
+            <input type="email" class="form-control" id="InputEmailLogin" aria-describedby="emailHelp" autocomplete="off" required>
             <p id="noExiste" class="d-none text-danger">Las credenciales son inválidas</p>
           </div>
           <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-            <input type="password" class="form-control" id="InputPasswordLogin" autocomplete="off">
+            <label for="exampleInputPassword1" class="form-label">Contraseña</label><span class="text-danger">*</span>
+            <input type="password" class="form-control" id="InputPasswordLogin" autocomplete="off" required>
           </div>
           <button type="submit" class="btn btn-primary">Iniciá Sesión</button>
         </form>
@@ -71,21 +71,22 @@
       <div class="modal-body">
         <form id="FormRegistro">
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="InputNameRegistro" aria-describedby="emailHelp">
+            <label for="exampleInputEmail1" class="form-label">Nombre</label><span class="text-danger">*</span>
+            <input type="text" class="form-control" id="InputNameRegistro" aria-describedby="emailHelp" required>
           </div>
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Apellido</label>
-            <input type="text" class="form-control" id="InputLastNameRegistro" aria-describedby="emailHelp">
+            <label for="exampleInputEmail1" class="form-label">Apellido</label><span class="text-danger">*</span>
+            <input type="text" class="form-control" id="InputLastNameRegistro" aria-describedby="emailHelp" required>
           </div>
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email</label>
-            <input type="email" class="form-control" id="InputEmailRegistro" aria-describedby="emailHelp" autocomplete="off">
+            <label for="exampleInputEmail1" class="form-label">Email</label><span class="text-danger">*</span>
+            <input type="email" class="form-control" id="InputEmailRegistro" aria-describedby="emailHelp" autocomplete="off" required>
             <p id="alreadyEmail" class="d-none text-danger">El email ya se encuentra registrado</p>
           </div>
           <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-            <input type="password" class="form-control" id="InputPasswordRegistro" autocomplete="off">
+            <label for="exampleInputPassword1" class="form-label">Contraseña</label><span class="text-danger">*</span>
+            <input type="password" class="form-control" id="InputPasswordRegistro" autocomplete="off" required>
+            <p id="passValid" class="d-none text-danger">La contraseña debe tener al menos 1 mayuscula, 1 minuscula, un número y 8 carácteres</p>
           </div>
           <button type="submit" class="btn btn-primary">Registrarse</button>
         </form>

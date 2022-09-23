@@ -10,6 +10,7 @@
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <!-- FontAwesome -->
   <script src="https://kit.fontawesome.com/c517701c9a.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <title>Admin</title>
 </head>
 
@@ -29,11 +30,59 @@
     </div>
   </nav>
   <div class="container">
-    <div class="row justify-content-center my-5">
-
+    <h1 class="mt-3">Productos</h1>
+    <button type="button" class="btn btn-success my-4" data-bs-toggle="modal" data-bs-target="#AgregarProducto">Agregar</button>
+    <div class="row my-5">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Img</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Descripción</th>
+            <th scope="col">Precio</th>
+            <th scope="col">-</th>
+          </tr>
+        </thead>
+        <tbody id="TablaProductos">
+          
+        </tbody>
+      </table>
     </div>
   </div>
 
+
+  <!-- Modal Agregar Productos -->
+  <div class="modal fade" id="AgregarProducto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Agregar Producto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="FormProductos">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Imágen</label>
+              <input type="text" class="form-control" id="InputImgProductos" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Nombre</label><span class="text-danger">*</span>
+              <input type="text" class="form-control" id="InputNameProductos" aria-describedby="emailHelp" required>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Descripción</label>
+              <input type="text" class="form-control" id="InputDescripcionProductos" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Precio</label><span class="text-danger">*</span>
+              <input type="texto" class="form-control" id="InputPrecioProductos" aria-describedby="emailHelp" autocomplete="off" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Agregar</button>
+          </form>
+        </div>
+    </div>
+  </div>
 
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
