@@ -6,9 +6,7 @@ const playGame = () => {
   getRandomOption();
   seleccionJugador();
 }
-const getRandomOption = () => {
-  return (bot = Math.round(Math.random() * 2));
-};
+const getRandomOption = () => (bot = Math.round(Math.random() * 2));
 
 const seleccionJugador = () => {
   jugador = parseInt(

@@ -88,3 +88,29 @@ const displayProducts = (products) => {
 }
 
 displayProducts(products);
+
+//DESESTRUCTURACIÓN DE UN OBJETO
+// Desestructuramos un objeto por medio de las llaves para obtener su propiedad. (La propiedad que necesitemos)
+const { nombre } = persona;
+console.log(`El nombre es: ${nombre}, y su edad es: ${persona.edad}`);
+
+//DESESTRUCTURACIÓN DE UN ARRAYS
+// Entre [] asignamos un nombre al objeto que queremos traer, siempre va a corresponder a la posición del array
+const [Leche, Arroz] = products;
+console.log(Arroz)
+
+//SPREAD OPERATOR --> Se lo usa para arrays como para objetos
+const auto = {
+  nombre: 'auto',
+  marca: 'Fiat',
+  modelo: '2015'
+}
+
+//Para hacer una copia del objeto
+const copiaAuto = {...auto}
+
+console.log(copiaAuto)
+
+//Para listar los intems de un array
+console.log('Spread Operator', ...products)
+
